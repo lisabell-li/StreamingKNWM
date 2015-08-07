@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head -->
+  <head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/css/bootstrap.min.css' />
+  <link rel='stylesheet' href='/css/style.css' /> 
+  <link rel='shortcut icon' href='img/favicon.ico'> 
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="./js/formfunctions.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  </head>     
+ 
+ <!-- Body -->
+ <body>
+   <Header>
+   <div class="">
+   <nav class="navbar navbar-default navbar-fixed-top">
+   <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+    <a class="navbar-brand" href="/">
+    <img id="main-nav" alt="Brand" src="img/Shareoutlogokl.png"> </a></div><ul class="nav navbar-nav">
+   <li><a href="/" class="navbar-brand">Start</a></li>
+   <li class="active"><a href="/ArticleCreation" class="navbar-brand">Artikel einstellen</a></li>
+   <li ><a href="/idea" class="navbar-brand">Wie funktioniert's?</a></li>
+   </ul>
+   </nav>
+   </div>
+   </Header>
+
+ <!-- Map -->
+  <div id="formi"  >
+
+    </br>
+    </br>
+    <form class="form-horizontal"  id="addItem" >
+       <div class="form-group">
+       <label for="Titel" class="col-sm-2 control-label">Titel</label>
+       <div class="col-sm-10">
+         <input type="text" class="form-control" id="title" name="title" placeholder="Toller DDR Rasenmäher">
+      </div>
+      </div>
+       <div class="form-group">
+       <label for="Beschreibung" class="col-sm-2 control-label">Beschreibung</label>
+       <div class="col-sm-10">
+         <input type="text" class="form-control" id="description" name="description" placeholder="kurze Beschreibung">
+      </div>
+      </div>
+       <div class="form-group">
+       <label class="col-sm-2 control-label">Wähle eine Kategorie aus</label>
+         <div class="col-sm-10">
+          <select id="category" name="category"   class="form-control">
+        <option value="1">Möbel</option>
+        <option value="2" selected="selected">Technik</option>
+        <option value="3">Textilien</option>
+        <option value="4">Bücher</option>
+        <option value="5">Sonstiges</option>
+      </select>
+      </div>
+      </div>
+       <div class="form-group">
+       <label for="Strasse" class="col-sm-2 control-label">Strasse und Hausnummer</label>
+       <div class="col-sm-10">
+         <input type="text" class="form-control" id="street" name="street" placeholder="Strasse + Hausnr.">
+      </div>
+      </div>
+       <div class="form-group">
+       <label for="PLZ" class="col-sm-2 control-label">Postleitzahl</label>
+       <div class="col-sm-10">
+         <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="PLZ">
+      </div>
+      </div>
+       <div class="form-group">
+       <label for="Ort" class="col-sm-2 control-label">Ort</label>
+       <div class="col-sm-10">
+         <input type="text" class="form-control" name="city" id="city" placeholder="Ort">
+      </div>
+      </div>
+       <div class="form-group">
+       <label for="mail" class="col-sm-2 control-label">E-Mail</label>
+       <div class="col-sm-10">
+         <input type="text" class="form-control" name="email" id="email" placeholder="Mail-Adresse (nicht öffentlich, nur für die Löschfunktion)">
+      </div>
+      </div>
+       <div class="form-group">
+       <label for="exampleInputFile" class="col-sm-2 control-label">File input</label>
+       <div class="col-sm-10">
+         <input type="file" name="fileInput" id="fileInput">
+      </div>
+      </div>
+       <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+         <button id="btnSubmit" onclick="setData()">Artikel anlegen</button>
+      </div>
+      </div>
+    </form>
+ </div>
+
+<!-- Footer -->
+
+
+<br>
+	<div align="center">
+	 </br>
+	
+</div>
+ <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyAyxjsqQx-5zv2TXroWt-WyWo5NO9l90yI&sensor=true"></script>
+ 
+</body>
+
+</html>
