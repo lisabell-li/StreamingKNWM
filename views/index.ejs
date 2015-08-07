@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" ng-app="knwmApp">
 
     <head>
         
@@ -47,7 +47,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html"><img src="./img/logoknwm.png" height="60";></img> </a>
+					<a class="navbar-brand" href="/"><img src="./img/logoknwm.png" height="60";></img> </a>
 					<a class="navbar-brand zwei" href="index.html" style="color:white">Kulturnetzwerk Wedding Moabit</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -108,52 +108,75 @@
         <!-- Services -->
         <div class="services-container">
 	        <div class="container">
-	            <div class="row">
-	            	<div class="col-sm-3">
+	            <div class="row" ng-controller="VideoCtrl">
+	            <form>
+	    
+								
+								<label>Nach Künstler filtern:</label>
+					<select id="selectArtist" 
+									ng-model="artists">
+									<option value="Lisa" >Lisa und Kugel</option>
+									<option value="Friedrich">Friedrich der Große</option>
+									<option value="Mad">Mad Max</option>
+									<option value="ALL">Kein Filter</option>
+								</select>
+								
+								
+								 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Nach Tags filtern:</label>
+	            <select id="selectRole" ng-model="model">
+								<option value="Moabit">Moabit</option>
+								<option value="Wedding">Wedding</option>
+								<option value="Berlin">Berlin</option>
+								<option value="Konzert">Konzert</option>
+								<option value="ALL">Kein Filter</option>
+							</select>
+							
+					</form>		
+	            	<div class="col-sm-3" ng-hide="model=='Wedding'||model=='Berlin'||model=='Konzert' ||artists=='Friedrich'||artists=='Mad'">
 		                <div class="service wow fadeInUp">
 		                 
                                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/romEePZWngs" frameborder="0" allowfullscreen></iframe>
                         		
 		                </div>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-3" ng-hide="model=='Wedding'||model=='Berlin'||model=='Konzert' ||artists=='Lisa'||artists=='Mad'">
 		                <div class="service wow fadeInDown">
 		                                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-blCB-3dDMU" frameborder="0" allowfullscreen></iframe>
                         		
 		                   </div>
 	                </div>
-	                <div class="col-sm-3">
+	                <div class="col-sm-3" ng-hide="model=='Wedding'||model=='Moabit'||model=='Konzert' ||artists=='Lisa'||artists=='Mad'">
 		                <div class="service wow fadeInUp">
 		                           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2gbLKxrvGxo" frameborder="0" allowfullscreen></iframe>
                         		
 		                    </div>
 	                </div>
-	                <div class="col-sm-3">
+	                <div class="col-sm-3" ng-hide="model=='Wedding'||model=='Berlin'||model=='Moabit' ||artists=='Lisa'||artists=='Mad'">
 		                <div class="service wow fadeInDown">
 		                          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tJemq4WMt24" frameborder="0" allowfullscreen></iframe>
                         		
 		                 </div>
 	                </div>
-	                	<div class="col-sm-3">
+	                	<div class="col-sm-3" ng-hide="model=='Moabit'||model=='Berlin'||model=='Konzert' ||artists=='Friedrich'||artists=='Mad'">
 		                <div class="service wow fadeInUp">
 		                 
                                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LUHmz1V3Hqs" frameborder="0" allowfullscreen></iframe>
                         		
 		                </div>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-3" ng-hide="model=='Wedding'||model=='Berlin'||model=='Konzert' ||artists=='Lisa'||artists=='Friedrich'">
 		                <div class="service wow fadeInDown">
 		                                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8_dwf5LJXZ4" frameborder="0" allowfullscreen></iframe>
                         		
 		                   </div>
 	                </div>
-	                <div class="col-sm-3">
+	                <div class="col-sm-3" ng-hide="model=='Moabit'||model=='Berlin'||model=='Konzert' ||artists=='Lisa'||artists=='Friedrich'">
 		                <div class="service wow fadeInUp">
 		                           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bVLVLwg8h1k" frameborder="0" allowfullscreen></iframe>
                         		
 		                    </div>
 	                </div>
-	                <div class="col-sm-3">
+	                <div class="col-sm-3" ng-hide="model=='Wedding'||model=='Moabit'||model=='Konzert' ||artists=='Lisa'||artists=='Friedrich'">
 		                <div class="service wow fadeInDown">
 		                          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aCNf4T2EhUo" frameborder="0" allowfullscreen></iframe>
                         		
@@ -325,6 +348,8 @@
         <script src="/js/jquery.ui.map.min.js"></script>
         <script src="/js/scripts.js"></script>
         <script src="/js/oms.min.js"></script>
+        <script src="/js/angular.min.js"></script>
+        <script src="/js/knwmapp.js"></script>
 
     </body>
 
